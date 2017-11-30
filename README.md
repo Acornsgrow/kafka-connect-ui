@@ -12,9 +12,9 @@ This is a web tool for Kafka Connect for setting up and managing connectors for 
 ## Run standalone with docker
 
 ```
-docker run --rm -it -p 8000:8000 \
+docker run --rm -it -p 8023:8023 \
            -e "CONNECT_URL=http://connect.distributed.url" \
-           landoop/kafka-connect-ui
+           acornsgrow/kafka-connect-ui
 ```
 
 The CONNECT_URL can be a comma separated array of Connect worker endpoints. E.g: CONNECT_URL=http://connect.1.url,http://connect.2.url"
@@ -22,7 +22,7 @@ The CONNECT_URL can be a comma separated array of Connect worker endpoints. E.g:
 Additionally you can assign custom names to your Connect clusters by appending a semicolon and the cluster name after the endpoint URL. E.g:
 
 ```"CONNECT_URL=http://connect.1.url;dev cluster,http://connect.2.url;production cluster"```
- 
+
 Web UI will be available at `http://localhost:8000`
 
 
@@ -90,7 +90,7 @@ The project is licensed under the [BSL](http://www.landoop.com/bsl) license.
 
 * [schema-registry-ui](https://github.com/Landoop/schema-registry-ui), View, create, evolve and manage your Avro Schemas on your Kafka cluster
 * [kafka-topics-ui](https://github.com/Landoop/kafka-topics-ui), UI to browse Kafka data and work with Kafka Topics                   
-* [fast-data-dev](https://github.com/Landoop/fast-data-dev), Docker for Kafka developers (schema-registry,kafka-rest,zoo,brokers,landoop) 
+* [fast-data-dev](https://github.com/Landoop/fast-data-dev), Docker for Kafka developers (schema-registry,kafka-rest,zoo,brokers,landoop)
 * [Landoop-On-Cloudera](https://github.com/Landoop/Landoop-On-Cloudera), Install and manage your kafka streaming-platform on you Cloudera CDH cluster
 
 
